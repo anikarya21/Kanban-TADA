@@ -41,7 +41,7 @@ button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px
 .board-content { padding: 34px 35px 36px; }
 .board-title-row { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin: 0 0 25px; }
 .eyebrow { margin-bottom: 9px; color: #929daa; font-size: 10px; font-weight: 700; letter-spacing: 1px; }
-.eyebrow span { padding: 0 3px; color: var(--yellow); }
+.eyebrow-separator { display: inline-block; width: 4px; height: 4px; margin: 0 5px 2px; border-radius: 50%; background: var(--yellow); }
 h1 { margin: 0; color: var(--navy); font-size: 27px; line-height: 1.2; font-weight: 720; }
 .board-mark { display: flex; align-items: center; gap: 8px; padding: 8px 11px; border: 1px solid #e2e8ef; border-radius: 6px; background: #fff; color: #607084; font-size: 11px; }
 .board-mark svg { color: var(--blue); }

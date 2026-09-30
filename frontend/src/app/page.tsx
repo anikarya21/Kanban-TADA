@@ -182,7 +182,7 @@ export default function Home() {
         <section className="board-content" aria-labelledby="board-title">
           <div className="board-title-row">
             <div>
-              <div className="eyebrow">NORTHSTAR STUDIO <span>·</span> PROJECT BOARD</div>
+              <div className="eyebrow">NORTHSTAR STUDIO <span className="eyebrow-separator" /> PROJECT BOARD</div>
               <h1 id="board-title">Product launch</h1>
             </div>
             <div className="board-mark"><Columns3 size={19} /><span>5 stages</span></div>

@@ -35,15 +35,16 @@ test("dragging a card moves it into another stage", async ({ page }) => {
   await expect(page.getByRole("region", { name: "Backlog" }).getByText("Map customer onboarding")).toHaveCount(0);
 });
 
-test("keyboard dragging moves a card between stages", async ({ page }) => {
+test("keyboard dragging reorders cards within a stage", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto("/");
   const handle = page.getByRole("button", { name: "Move Map customer onboarding", exact: true });
   await handle.focus();
   await handle.press("Space");
-  await page.keyboard.press("ArrowRight");
+  await page.keyboard.press("ArrowDown");
   await page.keyboard.press("Space");
-  await expect(page.getByRole("region", { name: "Planned" }).getByText("Map customer onboarding")).toBeVisible();
+  await expect(page.getByRole("region", { name: "Backlog" }).locator(".task-card").first().getByRole("heading"))
+    .toHaveText("Review analytics events");
 });
 
 test("board remains usable on a narrow screen", async ({ page }) => {
